@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ebd254a6b4f295822b48b641fb25c89a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ebd254a6b4f295822b48b641fb25c89a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ebd254a6b4f295822b48b641fb25c89a = L.map(
+                "map_ebd254a6b4f295822b48b641fb25c89a",
+                {
+                    center: [-25.4296, -49.2719],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dbf2427a55a282c504c9a8ffd7487097 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_dbf2427a55a282c504c9a8ffd7487097.addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+            var marker_c613d3fcb95416cebfb4820f5f883c42 = L.marker(
+                [-25.4296, -49.2719],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_053449c76b8bf58ba424ba6ed38586ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c600f07debcbd69369e9b40d6f90e80 = $(`<div id="html_0c600f07debcbd69369e9b40d6f90e80" style="width: 100.0%; height: 100.0%;">Curitiba/PR</div>`)[0];
+                popup_053449c76b8bf58ba424ba6ed38586ab.setContent(html_0c600f07debcbd69369e9b40d6f90e80);
+            
+        
+
+        marker_c613d3fcb95416cebfb4820f5f883c42.bindPopup(popup_053449c76b8bf58ba424ba6ed38586ab)
+        ;
+
+        
+    
+    
+            var marker_645ee585e46817ddb808dcfa91747f62 = L.marker(
+                [-23.3045, -51.1696],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_4e7e362b4ef46b52b32df13545965f99 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a58e5405269adbf18f3665b64df95d4c = $(`<div id="html_a58e5405269adbf18f3665b64df95d4c" style="width: 100.0%; height: 100.0%;">Londrina/PR</div>`)[0];
+                popup_4e7e362b4ef46b52b32df13545965f99.setContent(html_a58e5405269adbf18f3665b64df95d4c);
+            
+        
+
+        marker_645ee585e46817ddb808dcfa91747f62.bindPopup(popup_4e7e362b4ef46b52b32df13545965f99)
+        ;
+
+        
+    
+    
+            var marker_22d5376e151159ad55068d44a2a78829 = L.marker(
+                [-25.5163, -54.5854],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_ae8d228c5f2a8946ff2c9f4738ca8ff6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a44ecf7ae0b81a5167b18fd4533d33d = $(`<div id="html_7a44ecf7ae0b81a5167b18fd4533d33d" style="width: 100.0%; height: 100.0%;">Foz do Iguaçu/PR</div>`)[0];
+                popup_ae8d228c5f2a8946ff2c9f4738ca8ff6.setContent(html_7a44ecf7ae0b81a5167b18fd4533d33d);
+            
+        
+
+        marker_22d5376e151159ad55068d44a2a78829.bindPopup(popup_ae8d228c5f2a8946ff2c9f4738ca8ff6)
+        ;
+
+        
+    
+    
+            var marker_dbaa0446735cdc293abfc5af1845ec61 = L.marker(
+                [-26.2286, -51.087],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_e69a5bdb29dc7f5a597c51ecd1efd0b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88c13ec0a4b822750b3502edee161e91 = $(`<div id="html_88c13ec0a4b822750b3502edee161e91" style="width: 100.0%; height: 100.0%;">União da Vitória/PR</div>`)[0];
+                popup_e69a5bdb29dc7f5a597c51ecd1efd0b1.setContent(html_88c13ec0a4b822750b3502edee161e91);
+            
+        
+
+        marker_dbaa0446735cdc293abfc5af1845ec61.bindPopup(popup_e69a5bdb29dc7f5a597c51ecd1efd0b1)
+        ;
+
+        
+    
+    
+            var marker_18ad20412695ff024cd79977a7281b25 = L.marker(
+                [-26.3031, -48.8417],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_487d8956135193ad158c1bbf130a8db0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f399db5d89ea9eda8f6fc37b07f3aa4a = $(`<div id="html_f399db5d89ea9eda8f6fc37b07f3aa4a" style="width: 100.0%; height: 100.0%;">Joinville/SC</div>`)[0];
+                popup_487d8956135193ad158c1bbf130a8db0.setContent(html_f399db5d89ea9eda8f6fc37b07f3aa4a);
+            
+        
+
+        marker_18ad20412695ff024cd79977a7281b25.bindPopup(popup_487d8956135193ad158c1bbf130a8db0)
+        ;
+
+        
+    
+    
+            var marker_0bef9593ff2ef5e3d24e741478d096d2 = L.marker(
+                [-27.1006, -52.6152],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_234a6526e4bc7c39566334a83ed960e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44df80c6957cb79037f0ec5e8c57a49c = $(`<div id="html_44df80c6957cb79037f0ec5e8c57a49c" style="width: 100.0%; height: 100.0%;">Chapecó/SC</div>`)[0];
+                popup_234a6526e4bc7c39566334a83ed960e1.setContent(html_44df80c6957cb79037f0ec5e8c57a49c);
+            
+        
+
+        marker_0bef9593ff2ef5e3d24e741478d096d2.bindPopup(popup_234a6526e4bc7c39566334a83ed960e1)
+        ;
+
+        
+    
+    
+            var marker_4e956935cec42c53fe6873f866685cfe = L.marker(
+                [-30.033, -51.22],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_100dd342012b8e5a958374eafd5977db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5e1958f3321574053e015e2aa14a7dd = $(`<div id="html_f5e1958f3321574053e015e2aa14a7dd" style="width: 100.0%; height: 100.0%;">Porto Alegre/RS</div>`)[0];
+                popup_100dd342012b8e5a958374eafd5977db.setContent(html_f5e1958f3321574053e015e2aa14a7dd);
+            
+        
+
+        marker_4e956935cec42c53fe6873f866685cfe.bindPopup(popup_100dd342012b8e5a958374eafd5977db)
+        ;
+
+        
+    
+    
+            var marker_b37dcee8b2ae531ea99b21fb9090bd85 = L.marker(
+                [-29.7621, -57.0881],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_b1ec0a150b91ed78bc0c445ed56c5cf1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d938d43705af9b311035c9cbdcc9d4d5 = $(`<div id="html_d938d43705af9b311035c9cbdcc9d4d5" style="width: 100.0%; height: 100.0%;">Uruguaiana/RS</div>`)[0];
+                popup_b1ec0a150b91ed78bc0c445ed56c5cf1.setContent(html_d938d43705af9b311035c9cbdcc9d4d5);
+            
+        
+
+        marker_b37dcee8b2ae531ea99b21fb9090bd85.bindPopup(popup_b1ec0a150b91ed78bc0c445ed56c5cf1)
+        ;
+
+        
+    
+    
+            var marker_99944c85245164d4b5ff157a66c98656 = L.marker(
+                [-31.7719, -52.3456],
+                {}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+        var popup_f7bff08a97f86d07bc8c3daadc935db5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b7d43d0b1750561639fcd055686a02e = $(`<div id="html_3b7d43d0b1750561639fcd055686a02e" style="width: 100.0%; height: 100.0%;">Pelotas/RS</div>`)[0];
+                popup_f7bff08a97f86d07bc8c3daadc935db5.setContent(html_3b7d43d0b1750561639fcd055686a02e);
+            
+        
+
+        marker_99944c85245164d4b5ff157a66c98656.bindPopup(popup_f7bff08a97f86d07bc8c3daadc935db5)
+        ;
+
+        
+    
+    
+            var poly_line_2298ca21aad2d5a1e7833973b000c6ad = L.polyline(
+                [[-26.3031, -48.8417], [-27.1006, -52.6152]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+            var poly_line_3fc42fb151b238ed43d54be672c6b0ab = L.polyline(
+                [[-27.1006, -52.6152], [-30.033, -51.22]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+        
+    
+            var layer_control_24d2963bc3d8da606dfd6f80c5dc7b3a_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_dbf2427a55a282c504c9a8ffd7487097,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_24d2963bc3d8da606dfd6f80c5dc7b3a = L.control.layers(
+                layer_control_24d2963bc3d8da606dfd6f80c5dc7b3a_layers.base_layers,
+                layer_control_24d2963bc3d8da606dfd6f80c5dc7b3a_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ebd254a6b4f295822b48b641fb25c89a);
+
+        
+</script>
+</html>
