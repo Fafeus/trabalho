@@ -1,0 +1,62 @@
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import networkx as nx
+
+def desenhar_grafo_sobre_imagem(grafo, imagem_path, posicoes_personalizadas=None, caminho_escolhido=None):
+    img = mpimg.imread(imagem_path)
+    fig, ax = plt.subplots(figsize=(10, 10))
+    ax.imshow(img)
+    pos = posicoes_personalizadas if posicoes_personalizadas else nx.spring_layout(grafo)
+
+    if caminho_escolhido:
+        arestas = [(caminho_escolhido[i], caminho_escolhido[i + 1]) for i in range(len(caminho_escolhido) - 1)]
+        arestas_coloridas = [grafo[caminho_escolhido[i]][caminho_escolhido[i + 1]]['color'] for i in range(len(caminho_escolhido) - 1)]
+        nx.draw_networkx_edges(grafo, pos, edgelist=arestas, edge_color=arestas_coloridas, ax=ax)
+
+    nx.draw_networkx_nodes(grafo, pos, node_size=700, node_color="skyblue", ax=ax)
+    nx.draw_networkx_labels(grafo, pos, font_size=8, font_color="black", font_weight="bold", font_family="sans-serif", ax=ax)
+    plt.show()
+
+def criar_grafo():
+    grafo = nx.Graph()
+    fases = ['Inicio', 'Fase 1', 'Fase 2', 'Fase 3', 'Fase 4', 'Fase 5', 'Fase 6', 'Fase 7', 'Fase 8']
+    posicoes = [(170, 1410), (573, 1427), (553, 1666), (573, 1881), (741, 1925), (1103, 1954), (1439, 1881), (1486, 1595), (1630, 1792)]
+    
+    # Adiciona nós ao grafo com as posições personalizadas
+    for fase, posicao in zip(fases, posicoes):
+        grafo.add_node(fase, pos=posicao)
+
+    conexoes = [('Inicio', 'Fase 1'), ('Fase 1', 'Fase 2'), ('Fase 2', 'Fase 3'), ('Fase 3', 'Fase 4'),
+                ('Fase 4', 'Fase 5'), ('Fase 5', 'Fase 6'), ('Fase 6', 'Fase 7'), ('Fase 6', 'Fase 8'), ('Fase 7', 'Fase 8')]
+
+    for origem, destino in conexoes:
+        grafo.add_edge(origem, destino, color='red')
+
+    return grafo
+
+def main():
+    grafo = criar_grafo()
+    posicoes_personalizadas = nx.get_node_attributes(grafo, 'pos')
+    imagem_path = r"M:\TrabFafeusFac\TrabFafeusFac\mapa.png"
+    fase_atual = 'Inicio'
+
+    while True:
+        print(f"Você está na {fase_atual}")
+        escolha = input("Digite o número da fase para onde deseja ir (ou 'sair' para encerrar): ")
+
+        if escolha.lower() == 'sair':
+            break
+
+        fase_destino = f'Fase {escolha}'
+        caminho_escolhido = nx.shortest_path(grafo, source='Inicio', target=fase_destino)
+
+        for i in range(len(caminho_escolhido) - 1):
+            if not grafo.has_edge(caminho_escolhido[i], caminho_escolhido[i + 1]):
+                grafo.add_edge(caminho_escolhido[i], caminho_escolhido[i + 1], color='red')
+
+        posicoes_personalizadas = nx.get_node_attributes(grafo, 'pos')
+        desenhar_grafo_sobre_imagem(grafo, imagem_path, posicoes_personalizadas, caminho_escolhido)
+        fase_atual = fase_destino
+
+if __name__ == "__main__":
+    main()
